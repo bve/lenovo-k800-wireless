@@ -1,0 +1,99 @@
+{
+    "version": "2.0.0",
+    "options": {
+        "cwd": "${workspaceFolder}"
+    },
+    "tasks": [
+        {
+            "label": "Keyboard: build LPC",
+            "type": "process",
+            "command": "${workspaceFolder}/.venv/bin/python",
+            "args": [
+                "${workspaceFolder}/tools/build_lpc.py"
+            ],
+            "hide": true,
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "windows": {
+                "command": "${workspaceFolder}/.venv/Scripts/python.exe"
+            }
+        },
+        {
+            "label": "Keyboard: build nRF",
+            "type": "process",
+            "command": "${workspaceFolder}/.venv/bin/pio",
+            "args": [
+                "run",
+                "-e",
+                "supermini_ble"
+            ],
+            "hide": true,
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "windows": {
+                "command": "${workspaceFolder}/.venv/Scripts/pio.exe"
+            }
+        },
+        {
+            "label": "Keyboard: flash LPC over BLE",
+            "type": "process",
+            "command": "${workspaceFolder}/.venv/bin/python",
+            "args": [
+                "${workspaceFolder}/tools/ble_update.py",
+                "lpc",
+                "--address",
+                "${input:keyboardBleAddress}",
+                "${workspaceFolder}/build/lpc11u13/keyboard.bin"
+            ],
+            "windows": {
+                "command": "${workspaceFolder}/.venv/Scripts/python.exe"
+            },
+            "dependsOn": "Keyboard: build LPC",
+            "dependsOrder": "sequence",
+            "problemMatcher": [],
+            "runOptions": {
+                "instanceLimit": 1
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        },
+        {
+            "label": "Keyboard: flash nRF over BLE",
+            "type": "process",
+            "command": "${workspaceFolder}/.venv/bin/python",
+            "args": [
+                "${workspaceFolder}/tools/ble_update.py",
+                "nrf",
+                "--address",
+                "${input:keyboardBleAddress}",
+                "${workspaceFolder}/.pio/build/supermini_ble/firmware.zip"
+            ],
+            "windows": {
+                "command": "${workspaceFolder}/.venv/Scripts/python.exe"
+            },
+            "dependsOn": "Keyboard: build nRF",
+            "dependsOrder": "sequence",
+            "problemMatcher": [],
+            "runOptions": {
+                "instanceLimit": 1
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "keyboardBleAddress",
+            "type": "promptString",
+            "description": "Keyboard BLE address or OS UUID (use tools/ble_update.py scan)"
+        }
+    ]
+}

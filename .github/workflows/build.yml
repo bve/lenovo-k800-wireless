@@ -1,0 +1,32 @@
+name: Build and test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  firmware:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: 'tools/requirements-*.txt'
+      - name: Install dependencies
+        run: python -m pip install -r tools/requirements-dev.txt
+      - name: Host tests
+        run: python tools/run_tests.py
+      - name: Build nRF52840
+        run: pio run -e supermini_ble
+      - name: Build LPC11U13
+        run: python tools/build_lpc.py
+      - name: Package and verify
+        run: |
+          python tools/package_nrf.py
+          python tools/verify_artifacts.py

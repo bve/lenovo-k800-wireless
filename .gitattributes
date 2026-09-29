@@ -1,0 +1,3 @@
+* text=auto eol=lf
+# Keep the reviewed patch byte-identical to the CRLF upstream diff.
+patches/bootloader/*.patch -text -whitespace

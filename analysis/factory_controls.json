@@ -1,0 +1,222 @@
+{
+  "sha256": "ae89e2b3028a767ad9787610cf032206ca518004adc4202b9b3b9675a610648e",
+  "evidence": "analysis/factory_controls.md",
+  "physical_key_validation": "Not performed for these controls",
+  "host_mode_flag": "0x10000239",
+  "input_report": {
+    "usage_page": "0xff00",
+    "report_id": 3,
+    "length_with_id": 4,
+    "endpoint": "0x82",
+    "buffer": "0x100002bd",
+    "handler": "0x3bc0"
+  },
+  "controls": [
+    {
+      "name": "G1",
+      "matrix_index": 123,
+      "row": 15,
+      "column": 3,
+      "row_pin": "PIO0_20",
+      "column_pin": "PIO1_27",
+      "table_offset": "0x5598",
+      "factory_code": "0xb0",
+      "report_byte_including_id": 2,
+      "mask_offset": "0x5485",
+      "mask": "0x01",
+      "fallback_when_host_mode_is_zero": {
+        "table_offset": "0x55c4",
+        "class": "0x01",
+        "usage": "0x1e"
+      }
+    },
+    {
+      "name": "G2",
+      "matrix_index": 127,
+      "row": 15,
+      "column": 7,
+      "row_pin": "PIO0_20",
+      "column_pin": "PIO1_25",
+      "table_offset": "0x55a0",
+      "factory_code": "0xb1",
+      "report_byte_including_id": 2,
+      "mask_offset": "0x5486",
+      "mask": "0x02",
+      "fallback_when_host_mode_is_zero": {
+        "table_offset": "0x55cc",
+        "class": "0x01",
+        "usage": "0x1f"
+      }
+    },
+    {
+      "name": "G3",
+      "matrix_index": 124,
+      "row": 15,
+      "column": 4,
+      "row_pin": "PIO0_20",
+      "column_pin": "PIO0_17",
+      "table_offset": "0x559a",
+      "factory_code": "0xb2",
+      "report_byte_including_id": 2,
+      "mask_offset": "0x5487",
+      "mask": "0x04",
+      "fallback_when_host_mode_is_zero": {
+        "table_offset": "0x55c6",
+        "class": "0x01",
+        "usage": "0x20"
+      }
+    },
+    {
+      "name": "G4",
+      "matrix_index": 122,
+      "row": 15,
+      "column": 2,
+      "row_pin": "PIO0_20",
+      "column_pin": "PIO1_26",
+      "table_offset": "0x5596",
+      "factory_code": "0xb3",
+      "report_byte_including_id": 2,
+      "mask_offset": "0x5488",
+      "mask": "0x08",
+      "fallback_when_host_mode_is_zero": {
+        "table_offset": "0x55c2",
+        "class": "0x01",
+        "usage": "0x21"
+      }
+    },
+    {
+      "name": "G5",
+      "matrix_index": 125,
+      "row": 15,
+      "column": 5,
+      "row_pin": "PIO0_20",
+      "column_pin": "PIO0_18",
+      "table_offset": "0x559c",
+      "factory_code": "0xb4",
+      "report_byte_including_id": 2,
+      "mask_offset": "0x5489",
+      "mask": "0x10",
+      "fallback_when_host_mode_is_zero": {
+        "table_offset": "0x55c8",
+        "class": "0x01",
+        "usage": "0x22"
+      }
+    },
+    {
+      "name": "G6",
+      "matrix_index": 126,
+      "row": 15,
+      "column": 6,
+      "row_pin": "PIO0_20",
+      "column_pin": "PIO1_16",
+      "table_offset": "0x559e",
+      "factory_code": "0xb5",
+      "report_byte_including_id": 2,
+      "mask_offset": "0x548a",
+      "mask": "0x20",
+      "fallback_when_host_mode_is_zero": {
+        "table_offset": "0x55ca",
+        "class": "0x01",
+        "usage": "0x6a"
+      }
+    },
+    {
+      "name": "MR",
+      "matrix_index": 134,
+      "row": 16,
+      "column": 6,
+      "row_pin": "PIO1_31",
+      "column_pin": "PIO1_16",
+      "table_offset": "0x55ae",
+      "factory_code": "0xb6",
+      "report_byte_including_id": 3,
+      "mask_offset": "0x5481",
+      "mask": "0x01",
+      "fallback_when_host_mode_is_zero": null
+    },
+    {
+      "name": "M1",
+      "matrix_index": 128,
+      "row": 16,
+      "column": 0,
+      "row_pin": "PIO1_31",
+      "column_pin": "PIO0_19",
+      "table_offset": "0x55a2",
+      "factory_code": "0xb7",
+      "report_byte_including_id": 3,
+      "mask_offset": "0x5482",
+      "mask": "0x02",
+      "fallback_when_host_mode_is_zero": null
+    },
+    {
+      "name": "M2",
+      "matrix_index": 130,
+      "row": 16,
+      "column": 2,
+      "row_pin": "PIO1_31",
+      "column_pin": "PIO1_26",
+      "table_offset": "0x55a6",
+      "factory_code": "0xb8",
+      "report_byte_including_id": 3,
+      "mask_offset": "0x5483",
+      "mask": "0x04",
+      "fallback_when_host_mode_is_zero": null
+    },
+    {
+      "name": "M3",
+      "matrix_index": 129,
+      "row": 16,
+      "column": 1,
+      "row_pin": "PIO1_31",
+      "column_pin": "PIO1_19",
+      "table_offset": "0x55a4",
+      "factory_code": "0xb9",
+      "report_byte_including_id": 3,
+      "mask_offset": "0x5484",
+      "mask": "0x08",
+      "fallback_when_host_mode_is_zero": null
+    },
+    {
+      "name": "Windows lock",
+      "matrix_index": 135,
+      "row": 16,
+      "column": 7,
+      "row_pin": "PIO1_31",
+      "column_pin": "PIO1_25",
+      "table_offset": "0x55b0",
+      "factory_code": "0xc0",
+      "report_byte_including_id": 1,
+      "mask_offset": "0x547e",
+      "mask": "0x01",
+      "fallback_when_host_mode_is_zero": null
+    },
+    {
+      "name": "Backlight C1",
+      "matrix_index": 132,
+      "row": 16,
+      "column": 4,
+      "row_pin": "PIO1_31",
+      "column_pin": "PIO0_17",
+      "table_offset": "0x55aa",
+      "factory_code": "0xc1",
+      "report_byte_including_id": 1,
+      "mask_offset": "0x547f",
+      "mask": "0x02",
+      "fallback_when_host_mode_is_zero": null
+    },
+    {
+      "name": "Backlight C2",
+      "matrix_index": 133,
+      "row": 16,
+      "column": 5,
+      "row_pin": "PIO1_31",
+      "column_pin": "PIO0_18",
+      "table_offset": "0x55ac",
+      "factory_code": "0xc2",
+      "report_byte_including_id": 1,
+      "mask_offset": "0x5480",
+      "mask": "0x04",
+      "fallback_when_host_mode_is_zero": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+diff --git a/lib/sdk11/components/libraries/bootloader_dfu/dfu_transport_ble.c b/lib/sdk11/components/libraries/bootloader_dfu/dfu_transport_ble.c
+index be6b672..e6acfd0 100644
+--- a/lib/sdk11/components/libraries/bootloader_dfu/dfu_transport_ble.c
++++ b/lib/sdk11/components/libraries/bootloader_dfu/dfu_transport_ble.c
+@@ -48,7 +48,7 @@
+ 
+ #define MIN_CONN_INTERVAL                    (uint16_t)(MSEC_TO_UNITS(15, UNIT_1_25_MS))             /**< Minimum acceptable connection interval (11.25 milliseconds). */
+ #define MAX_CONN_INTERVAL                    (uint16_t)(MSEC_TO_UNITS(30, UNIT_1_25_MS))             /**< Maximum acceptable connection interval (15 milliseconds). */
+-#define SLAVE_LATENCY                        4                                                       /**< Slave latency. */
++#define SLAVE_LATENCY                        0                                                       /**< Keep the central's supervision timeout valid; no skipped DFU events. */
+ #define CONN_SUP_TIMEOUT                     MSEC_TO_UNITS(8000, UNIT_10_MS)                         /**< Connection supervisory timeout (4 seconds). */
+ #define SPEEDUP_FLASH_WRITES                 1 /**< Speedup FLASH writes by changing Softdevice local latency */
+ 

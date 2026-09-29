@@ -1,0 +1,82 @@
+{
+  "sha256": "ae89e2b3028a767ad9787610cf032206ca518004adc4202b9b3b9675a610648e",
+  "size_bytes": 24576,
+  "boot_vectors": {
+    "table": "0x00000000",
+    "initial_sp": "0x10000740",
+    "reset_thumb": "0x00000291",
+    "first_eight_words_sum": "0x00000000"
+  },
+  "application_vectors": {
+    "table": "0x00002000",
+    "initial_sp": "0x100007a0",
+    "reset_thumb": "0x000044e5",
+    "first_eight_words_sum": "0x1000d669"
+  },
+  "crp_word": "0x1a0888a1",
+  "boot_usb": {
+    "offset": "0x1b00",
+    "vid": "0x1fc9",
+    "pid": "0x000b",
+    "bcd_device": "0x0100"
+  },
+  "application_usb": {
+    "offset": "0x5380",
+    "vid": "0x17ef",
+    "pid": "0x6082",
+    "bcd_device": "0x0119"
+  },
+  "manufacturer": "Lenovo",
+  "product": "Lenovo Y Gaming Mechanical Switch Keyboard",
+  "trailing_ff": {
+    "start": "0x571b",
+    "length": 2277,
+    "safe_patch_space_verified": false,
+    "reason": "Function 0x2eb8 erases sector 5 and writes 256 bytes at 0x5f00"
+  },
+  "matrix_rows": [
+    "PIO1_22",
+    "PIO0_14",
+    "PIO0_13",
+    "PIO0_12",
+    "PIO0_11",
+    "PIO0_22",
+    "PIO1_21",
+    "PIO1_28",
+    "PIO0_7",
+    "PIO1_24",
+    "PIO1_23",
+    "PIO0_9",
+    "PIO1_29",
+    "PIO1_20",
+    "PIO0_21",
+    "PIO0_20",
+    "PIO1_31",
+    "PIO0_8"
+  ],
+  "matrix_columns": [
+    "PIO0_19",
+    "PIO1_19",
+    "PIO1_26",
+    "PIO1_27",
+    "PIO0_17",
+    "PIO0_18",
+    "PIO1_16",
+    "PIO1_25"
+  ],
+  "swd_pins_in_matrix": [],
+  "alternate_key_table": {
+    "offset": "0x55c2",
+    "first_matrix_index": 122,
+    "entries": [
+      "01 21",
+      "01 1e",
+      "01 20",
+      "01 22",
+      "01 6a",
+      "01 1f"
+    ],
+    "selection": "Firmware condition in 0x4086 / RAM byte 0x10000239 equals zero"
+  },
+  "hardware_validation": "Not performed; extracted from static code and data only"
+}

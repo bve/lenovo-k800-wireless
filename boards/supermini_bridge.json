@@ -1,0 +1,54 @@
+{
+  "name": "SuperMini nRF52840 BLE keyboard bridge (S140 7.3.0)",
+  "vendor": "Local project",
+  "url": "https://github.com/joric/nrfmicro/wiki/Alternatives#supermini-nrf52840",
+  "build": {
+    "core": "nRF5",
+    "cpu": "cortex-m4",
+    "extra_flags": "-DNRF52840_XXAA",
+    "f_cpu": "64000000L",
+    "hwids": [
+      [
+        "0x239A",
+        "0x8029"
+      ]
+    ],
+    "mcu": "nrf52840",
+    "variant": "supermini_bridge",
+    "bsp": {
+      "name": "adafruit"
+    },
+    "softdevice": {
+      "sd_flags": "-DS140",
+      "sd_name": "s140",
+      "sd_version": "7.3.0",
+      "sd_fwid": "0x0123"
+    },
+    "bootloader": {
+      "settings_addr": "0xFF000"
+    },
+    "usb_product": "Lenovo BLE Bridge"
+  },
+  "frameworks": [
+    "arduino"
+  ],
+  "connectivity": [
+    "bluetooth"
+  ],
+  "upload": {
+    "maximum_ram_size": 229376,
+    "maximum_size": 397312,
+    "protocol": "nrfutil",
+    "protocols": [
+      "nrfutil"
+    ],
+    "speed": 115200,
+    "use_1200bps_touch": true,
+    "require_upload_port": true,
+    "wait_for_upload_port": true
+  },
+  "debug": {
+    "jlink_device": "nRF52840_xxAA",
+    "svd_path": "nrf52840.svd"
+  }
+}

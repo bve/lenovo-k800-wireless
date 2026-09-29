@@ -1,0 +1,3 @@
+-r requirements-ble.txt
+platformio==6.1.18
+intelhex==2.3.0

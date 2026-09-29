@@ -1,0 +1,14 @@
+/build/
+/.pio/
+/.venv/
+__pycache__/
+*.py[cod]
+/.vscode/c_cpp_properties.json
+/.vscode/launch.json
+/firmware_backups/
+/private/
+/opensource/
+/analysis/ghidra/
+/analysis/nrf52840/
+/LPC11U1X.pdf
+.env
